@@ -82,7 +82,6 @@ public class LinkedList {
         return count;
     }
 
-	
 	class Node {
 		int data;
 		Node next;
