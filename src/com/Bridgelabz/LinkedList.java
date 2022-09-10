@@ -6,7 +6,9 @@ public class LinkedList {
 	Node tail;
 	
 	public void display() {
-		
+		/**
+		 * displaying the data(s) from node(s)
+		 */
 		Node temp = head;
 		while (temp != null) {
 			System.out.print(temp.data + " -> ");
@@ -26,6 +28,18 @@ public class LinkedList {
 		} else {
 			newNode.next = head;
 			head = newNode;
+		}
+	}
+	
+	public void append(int data) {
+		// Appending data
+		Node newNode = new Node(data);
+		if(head == null) {
+			head = newNode;
+			tail = newNode;
+		} else {
+			tail.next = newNode;
+			tail = newNode;
 		}
 	}
 	
@@ -68,6 +82,7 @@ public class LinkedList {
         return count;
     }
 
+	
 	class Node {
 		int data;
 		Node next;
